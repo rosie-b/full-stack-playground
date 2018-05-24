@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 const Main = () => {
   return (
     <div>
-      <h1>I am the main page</h1>
+      <h1>Main.jsx *check*</h1>
     </div>
   )
 }

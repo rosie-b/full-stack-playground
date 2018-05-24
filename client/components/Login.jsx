@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 const Login = () => {
   return (
     <div>
-      <h1>I am the login</h1>
+      <h1>Login.jsx *check*</h1>
     </div>
   )
 }

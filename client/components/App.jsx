@@ -10,6 +10,7 @@ import Main from './Main'
 const App = ({auth}) => (
   <Router>
     <div>
+      <h1>App.jsx *check*</h1>
       <Route exact path='/' component={props => auth.isAuthenticated
           ? <Main {...props} />
           : <Login {...props} />
