@@ -1,4 +1,4 @@
-import {isAuthenticated, getUserTokenInfo} from '../utils/auth'
+import { isAuthenticated, getUserTokenInfo } from '../utils/auth'
 
 const initialState = {
   isFetching: false,

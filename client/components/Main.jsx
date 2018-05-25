@@ -1,14 +1,29 @@
 import React from 'react'
-import {HashRouter as Router, Route} from 'react-router-dom'
-import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+import {logoutUser} from '../actions/logout'
 
-const Main = () => {
+function Main (props) {
   return (
     <div>
-      <h1>Main.jsx *check*</h1>
+      <div>
+        <h1>Main.jsx testing testing 123</h1>
+        <Link to="/">Home</Link>
+        {props.auth.isAuthenticated
+          ? <button onClick={() => props.dispatch(logoutUser())}>Logout</button>
+          : <div>
+            <Link to="/login">Login</Link>&nbsp;
+            <Link to="/register">Register</Link>
+          </div>
+        }
+      </div>
+
     </div>
   )
 }
 
-export default connect()(Main) 
+const mapStateToProps = ({auth}) => {
+  return {auth}
+}
+
+export default connect(mapStateToProps)(Main)

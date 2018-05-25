@@ -3,7 +3,7 @@ import request from 'superagent'
 import { get } from './localstorage'
 import { isAuthenticated } from './auth'
 
-const baseURL = '/api/v1/'
+const baseURL = '/api/'
 
 export default function consume(method = 'get', endpoint, data = {}) {
   const dataMethod = method.toLowerCase() === 'get' && 'query' || 'send'
@@ -21,7 +21,6 @@ export default function consume(method = 'get', endpoint, data = {}) {
       return res
     })
     .catch(err => {
-      console.log("api.js I am an error")
       throw err
     })
 }

@@ -1,3 +1,4 @@
+
 import request from '../utils/api'
 import {saveUserToken} from '../utils/auth'
 
@@ -39,9 +40,9 @@ export function loginUser (creds) {
         } else {
           const userInfo = saveUserToken(response.body.token)
           dispatch(receiveLogin(userInfo))
+          document.location = "/#/"
         }
-      }).catch(err => { return dispatch(loginError(err)) 
-        alert("Try Again!") }
+      }).catch(err => alert("Try Again!")
 
       )
   }
